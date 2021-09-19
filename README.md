@@ -28,24 +28,40 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Gateway managment Client 
+
 web Client for Gateway Managment Spring boot 
 
-# the Client has
+## the Client has
+
 get All for Device and Gateways list 
+
 get by Id for Each gateway to update and 
+
 Delete Each Device and Gateway by ID 
+
 Post/add Gateway and Device related to Gateway 
+
 update/put Each Gateway and Device 
 
-#Project Used 
+##Project Used 
+
 RxJS
+
 Observables
+
 Client Services 
+
 Components
+
 Angular Material 
+
 Data Transfer Object 
+
 Entities 
+
 Custom routes
+
 Http Requests 
+
 URL Paramters 
 
