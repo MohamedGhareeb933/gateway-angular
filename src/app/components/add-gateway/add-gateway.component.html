@@ -1,0 +1,20 @@
+<!-- gateway name input -->
+<div style="margin: 5%;">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Gateway Name" [(ngModel)]="name">
+  </div>
+  <br>
+  <!-- ip Address input-->
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter IP Adress " [(ngModel)]="ipAddress" >
+  </div>
+
+  <!-- submit button for add/post or update/put - disapled prevent multiple clickes
+  cancel send you back to gateway list -->
+  <div style="margin-top: 3%;">
+  <button type="submit" class="btn btn-primary" [disabled]="clicked" (click)="addOrUpdate(); clicked = true;" routerLink="/gateways">Submit</button>
+  <a type="submit" class="btn btn-danger" style="margin-left: 3%;" routerLink="/gateways">Cancel</a>
+</div>
+
+</div>
+

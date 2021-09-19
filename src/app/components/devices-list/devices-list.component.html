@@ -1,0 +1,54 @@
+<div class="container">
+  <div style="padding-top: 5%; padding-bottom: 5%">
+
+    <!-- add device button - route to add device component -->
+    <button type="button" routerLink="/add-device/{{gatewayId}}" class="btn btn-primary" style="margin-bottom: 2%; margin-top: 2%;">
+      Add Device
+    </button>
+    <hr>
+
+    <!-- Table rows and Columns -->
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Vendor</th>
+          <th scope="col">Date</th>
+          <th scope="col">status</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- iterate through devices container we just got from Device service Observable -->
+        <tr *ngFor="let index of devices" class="clickable-row" href="#">
+          <th scope="row">{{ index.id }}</th>
+          <td>{{ index.vendor }}</td>
+          <td>{{ index.date }}</td>
+
+          <!-- if the staus is true print activated otherwise not activated -->
+          <td>
+            <div *ngIf="index.status; else elseBlock">
+            Activated
+            </div>
+            <ng-template #elseBlock> Not Activated  </ng-template>
+
+          </td>
+
+          <!-- for each device we have to update and delete button -->
+          <td>
+            <button type="button" class="btn btn-primary" routerLink="/gateway-devices/{{gatewayId}}/update-device/{{index.id}}">
+              update
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" id="DeleteButton" [disabled]="clicked" (click)="deleteDevice(index.id); clicked = true;">
+              delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="/gateways" > back to Gateway list </a>
+  </div>
+</div>
+

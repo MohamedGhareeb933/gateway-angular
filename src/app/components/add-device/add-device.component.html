@@ -1,0 +1,23 @@
+
+<!-- Vendor Name input -->
+<div style="margin: 5%;">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter the Device Vendor Name" [(ngModel)]="vendor">
+  </div>
+  <br>
+
+<!-- Status material check Box -->
+      <section class="example-section">
+        <mat-checkbox class="example-margin" [(ngModel)]="status" (change)="onChange($event.checked)"> status </mat-checkbox>
+      </section>
+
+      <!-- submit button for add or update the Device - Disapled to prevent for multple Button click
+      Cancel Send me Back to Device List -->
+  <div style="margin-top: 3%;">
+    <button type="submit" class="btn btn-primary" [disabled]="clicked" (click)="addOrUpdate(); clicked = true;"
+      routerLink="/gateway-devices/{{gatewayId}}">Submit</button>
+    <a type="submit" class="btn btn-danger" style="margin-left: 3%;"
+      routerLink="/gateway-devices/{{gatewayId}}">Cancel</a>
+  </div>
+
+</div>

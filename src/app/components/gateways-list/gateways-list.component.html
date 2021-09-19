@@ -1,0 +1,42 @@
+<div class="container">
+  <div style="padding-top: 5%; padding-bottom: 5%">
+    <!-- add gateway button -->
+    <button type="button" routerLink="/add-gateway" class="btn btn-primary" style="margin-bottom: 2%">
+      Add Gateway
+    </button>
+
+    <!-- Gateway Table -->
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Id Address</th>
+          <th scope="col">Name</th>
+          <th scope="col">Serial</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- iterate Gateway container -->
+        <tr *ngFor="let index of gateways" class="clickable-row">
+          <th scope="row"> <a routerLink="/gateway-devices/{{index.id}}"> {{ index.id }} </a> </th>
+          <td>{{ index.ipAddress }}</td>
+          <td>{{ index.name }}</td>
+          <td>{{ index.serial }}</td>
+
+          <!-- each row has update and delete column -->
+          <td>
+            <button type="button" class="btn btn-primary" routerLink="/update-gateway/{{index.id}}">
+              update
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" [disabled]="clicked" (click)="deleteGateway(index.id); clicked = true;">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
