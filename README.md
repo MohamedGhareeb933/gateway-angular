@@ -43,7 +43,7 @@ Post/add Gateway and Device related to Gateway
 
 update/put Each Gateway and Device 
 
-##Project Used 
+## Project Used 
 
 RxJS
 
