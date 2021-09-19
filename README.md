@@ -25,3 +25,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Gateway managment Client 
+web Client for Gateway Managment Spring boot 
+
+# the Client has
+get All for Device and Gateways list 
+get by Id for Each gateway to update and 
+Delete Each Device and Gateway by ID 
+Post/add Gateway and Device related to Gateway 
+update/put Each Gateway and Device 
+
+#Project Used 
+RxJS
+Observables
+Client Services 
+Components
+Angular Material 
+Data Transfer Object 
+Entities 
+Custom routes
+Http Requests 
+URL Paramters 
+
