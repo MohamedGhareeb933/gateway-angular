@@ -8,12 +8,12 @@ Assuming that you already have Node and NPM
 
 Run `npm install` To install Node_modules 
 
-Assumingthat you already have Angular installed
+Assuming that you already have Angular installed
 Run `ng update` to update angular 
 
 Finally Run `npm update`
 
-Run `npm audit fix` if you have modertae or high vulnerability 
+Run `npm audit fix` if you have moderate or high vulnerability 
 
 ## Development server
 
