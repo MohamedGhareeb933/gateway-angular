@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
 
+## Build and Install 
+
+Assuming that you already have Node and NPM 
+
+Run `npm install` To install Node_modules 
+
+Assumingthat you already have Angular installed
+Run `ng update` to update angular 
+
+Finally Run `npm update`
+
+Run `npm audit fix` if you have modertae or high vulnerability 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
